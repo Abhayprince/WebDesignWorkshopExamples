@@ -1,0 +1,399 @@
+﻿@{
+    Layout = null;
+    string h1 = ViewBag.H1 == null ? "" : ViewBag.H1;
+    string p = ViewBag.Page;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PPT</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container text-center">
+                <h1>@h1</h1>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-sm-12" style="background: #f2f2f2;">
+                <div class="pull-left">
+                    <label type="button" data-target="#html-src-div" class="area-tab-btn btn btn-primary pull-left" style="border-radius:0;">HTML</label>
+                    @*<label type="button" data-target="#css-src-div" class="area-tab-btn btn btn-warning pull-left" style="border-radius:0;">CSS</label>
+                        <label type="button" data-target="#js-src-div" class="area-tab-btn  btn btn-info pull-left" style="border-radius:0;">JavaScript</label>*@
+                </div>
+                @*<label type="button" class="run-html-btn btn btn-primary pull-left" style="border-radius:0;">CODE</label>*@
+                <label type="button" class="btn btn-info pull-right" style="border-radius:0;">OUTPUT</label>
+                <div class="clearfix"></div>
+            </div>
+
+            @*<div id="left-code-section" class="col-sm-6" style="padding:0;>*@
+            <div id="left-code-section" style="padding:0; width: 50%;float: left;">
+                <div style="padding:0; position: relative;">
+                    <button id="slide-left-btn" class="btn btn-warning">
+                        <i class="glyphicon glyphicon-circle-arrow-left"></i>
+                    </button>
+                    <div class="newEditor" id="html-src-div" contenteditable="true" style="height: 500px; overflow-y: scroll;white-space: pre-wrap;    box-shadow: 2px 1px 10px #5cb85c;">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;meta name="viewport" content="width=device-width" />
+    &lt;title>PPT&lt;/title>
+    &lt;link href="/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+&lt;/head>
+&lt;body>
+    &lt;div>
+@{
+    switch (p.ToLower())
+    {
+        case "heading":
+            <text>&lt;h1>This is h1 Heading&lt;/h1>
+            &lt;h2>This is h2 Heading&lt;/h2>
+            &lt;h3>This is h3 Heading&lt;/h3>
+            &lt;h4>This is h4 Heading&lt;/h4>
+            &lt;h5>This is h5 Heading&lt;/h5>
+            &lt;h6>This is h6 Heading&lt;/h6></text>
+            break;
+        case "paragraph":
+        <text>&lt;p>TEKATION is a part of SoftCopy IT Services Pvt Ltd. We at tekation believe in "SPREADING THE KNOWLEDGE FOR FUTURE"&lt;/p>
+            &lt;p>We provide Industrial Training on Latest Technologies like Java, .Net, Android,PHP and Web Design etc. We have a very different
+            way of training, We belive in practical knowledge not in theoritical knowledge, so we focus more on practicing rather than rattafication
+            of long written theoritical knowledge.&lt;/p></text>
+            break;
+        case "anchor":
+        <text>&lt;a href="http://www.softcopyit.com">This is an Anchor Tag&lt;/a></text>
+            break;
+        case "br":
+        <text>Web &lt;br /> Design &lt;br/> And &lt;br /> Development &lt;br /> Workshop</text>
+            break;
+        case "hr":
+        <text>&lt;hr /></text>
+            break;
+        case "img":
+        <text>&lt;img src="/images/hill-top.jpeg" alt="Hill Top Image" /></text>
+            break;
+        case "style":
+        <text></text>                    break;
+        case "ul":
+        <text>&lt;ul&gt;
+            &lt;li&gt;item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;li&gt;Item 4&lt;/li&gt;
+            &lt;/ul&gt;</text>                    break;
+        case "ol":
+        <text>&lt;ol&gt;
+            &lt;li&gt;item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;li&gt;Item 4&lt;/li&gt;
+            &lt;/ol&gt;</text>                    break;
+        case "dl":
+        <text>&lt;dl&gt;
+            &lt;dt&gt;Tekation&lt;/dt&gt;
+            &lt;dd&gt;An ISO Certified Industrial Training Center in Ghaziabad&lt;/dd&gt;
+            &lt;dt&gt;Web Design & Development&lt;/dt&gt;
+            &lt;dd&gt;HTML + HTML5 + CSS + CSS3 + JavaScript + jQuery + Bootstrap&lt;/dd&gt;
+            &lt;/dl&gt;</text>                    break;
+        case "formatting":
+        <text>This is &lt;b>Bold&lt;/b> Text</text>                    break;
+        case "datalist":
+        <text>&lt;input list="languages">
+            &lt;datalist id="languages">
+            &lt;option value="English">
+            &lt;option value="Hindi">
+            &lt;option value="Chinese">
+            &lt;option value="Hinglish">
+            &lt;option value="Arabic">
+            &lt;/datalist></text>                    break;
+        case "svg":
+        <text>&lt;div class="container">
+            &lt;br />
+            &lt;svg width="500" height="150">
+            &lt;rect width="400" height="100" style="fill:#ff0000; stroke-width:10; stroke:green" />
+            &lt;Sorry, your browser does not support inline SVG.
+            &lt;/svg>
+            &lt;hr>
+            &lt;svg width="250" height="250">
+            &lt;circle cx="100" cy="100" r="50" stroke="darkgreen" stroke-width="2" fill="green" />
+            Sorry, your browser does not support inline SVG.
+            &lt;/svg>
+            &lt;/div></text>
+                                break;
+
+        case "bsmodal":
+        <text>&lt;div class="container">
+            &lt;button type="button" class="btn btn-info" data-toggle="modal" data-target="#bsmodal">Open modal popup&lt;/button>
+            &lt;div class="modal fade" id="bsmodal" tabindex="-1" role="dialog" aria-labelledby="bsmodalLabel">
+                &lt;div class="modal-dialog" role="document">
+                    &lt;div class="modal-content">
+                        &lt;div class="modal-header">
+                            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+                            &lt;h4 class="modal-title" id="bsmodalLabel">Modal Popup Title&lt;/h4>
+                        &lt;/div>
+                        &lt;div class="modal-body">
+                            This is a Bootstrap Modal Popup.
+                        &lt;/div>
+                        &lt;div class="modal-footer">
+                            &lt;button type="button" class="btn btn-default" data-dismiss="modal">Close&lt;/button>
+                            &lt;button type="button" class="btn btn-warning">OK&lt;/button>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        </text>
+                                                        break;
+                    case "bstabs":
+<text>&lt;ul class="nav nav-tabs" role="tablist">
+    &lt;li role="presentation" class="active">
+        &lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home&lt;/a>
+    &lt;/li>
+    &lt;li role="presentation">
+        &lt;a href="#about" aria-controls="about" role="tab" data-toggle="tab">About Me&lt;/a>
+    &lt;/li>
+    &lt;li role="presentation">
+        &lt;a href="#academics" aria-controls="academics" role="tab" data-toggle="tab">Academics&lt;/a>
+    &lt;/li>
+    &lt;li role="presentation">
+        &lt;a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education&lt;/a>
+    &lt;/li>
+&lt;/ul>
+&lt;div class="tab-content">
+    &lt;div role="tabpanel" class="tab-pane fade in active" id="home">
+        &lt;h2 class="text-primary">Tab Pane 1&lt;/h2>
+        &lt;p class="text-primary">This is Bootstrap Tabs Pane no. 1.&lt;/p>
+    &lt;/div>
+    &lt;div role="tabpanel" class="tab-pane fade" id="about">
+        &lt;h2 class="text-warning">About &lt;small>Tab Pane 2&lt;/small>&lt;/h2>
+        &lt;p class="text-warning">Here is the content of bootstrap tab pane no. 2.&lt;/p>
+    &lt;/div>
+    &lt;div role="tabpanel" class="tab-pane fade" id="academics">
+        &lt;h2 class="text-danger">Academic Details &lt;small>- Tab Pane 3&lt;/small>&lt;/h2>
+        &lt;p class="text-danger">&lt;Here goes bootstrap tab pane no-3 content.&lt;/p>
+    &lt;/div>
+    &lt;div role="tabpanel" class="tab-pane fade" id="education">
+        &lt;h2 class="text-info">Education &lt;small>- Tab Pane 4&lt;/small>&lt;/h2>
+        &lt;p class="text-info">Tab Pane no. 4 content goes here.&lt;/p>
+    &lt;/div>
+&lt;/div></text>
+                                                        break;
+                                case "bscollapse":
+<text>&lt;div class="container">&lt;br>
+    &lt;div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        &lt;div class="panel panel-info">
+            &lt;div class="panel-heading" role="tab" id="headingOne">
+                &lt;h4 class="panel-title">
+                    &lt;a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                    &lt;/a>
+                &lt;/h4>
+            &lt;/div>
+            &lt;div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                &lt;div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="panel panel-success">
+            &lt;div class="panel-heading" role="tab" id="headingTwo">
+                &lt;h4 class="panel-title">
+                    &lt;a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                    &lt;/a>
+                &lt;/h4>
+            &lt;/div>
+            &lt;div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                &lt;div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="panel panel-danger">
+            &lt;div class="panel-heading" role="tab" id="headingThree">
+                &lt;h4 class="panel-title">
+                    &lt;a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Collapsible Group Item #3
+                    &lt;/a>
+                &lt;/h4>
+            &lt;/div>
+            &lt;div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                &lt;div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="panel panel-warning">
+            &lt;div class="panel-heading" role="tab" id="headingFour">
+                &lt;h4 class="panel-title">
+                    &lt;a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Collapsible Group Item #4
+                    &lt;/a>
+                &lt;/h4>
+            &lt;/div>
+            &lt;div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                &lt;div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 4 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></text>
+                                                        break;
+                                case "ADFADGADerFDAG":
+                                <text></text>
+                                                        break;
+                            }
+                        }
+    &lt;/div>
+    &lt;script src="/libs/jquery-3.2.1.min.js">&lt;/script>
+&lt;/body>
+&lt;/html>
+                    </div>
+                    @*<div id="css-src-div" style="display: none; height: 500px; overflow-y: scroll;white-space: pre-wrap;box-shadow: 2px 1px 10px #5cb85c;">
+                            <textarea id="css-src-textarea" placeholder="CSS" style="height: 500px;"></textarea>
+                        </div>
+                        <div id="js-src-div" style="display: none; height: 500px; overflow-y: scroll;white-space: pre-wrap;box-shadow: 2px 1px 10px #5cb85c;">
+                            <textarea id="js-src-textarea" placeholder="JavaScript" style="height: 500px;"></textarea>
+                        </div>*@
+                </div>
+            </div>
+            @*<div class="col-sm-6" id="iframeContainer" style="border: 1px solid #808080; background: #fff; height: 500px;">*@
+            <div id="iframeContainer" style="width:50%;float: left; border: 1px solid #808080; background: #fff; height: 500px;">
+                @*<iframe id="iframeResult" srcdoc="" style="width: 100%; height: 500px;"></iframe>*@
+            </div>
+        </div>
+        <form id="html_code_frm">
+            <input type="hidden" id="html_code" name="html_code" />
+            @*<input type="hidden" id="css_code" name="css_code" />
+                <input type="hidden" id="js_code" name="js_code" />*@
+        </form>
+    </div>
+    <div class="container-fluid run-btn-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <button type="button" class="run-html-btn btn btn-success btn-block hvr-ripple-out" style="border-radius:0;">RUN</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="run-html-btn-new-window btn btn-warning hvr-ripple-out" style="border-radius:0;">
+                        <span class="glyphicon glyphicon-share-alt"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <link href="~/libs/css-hover/hover-min.css" rel="stylesheet" />
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/js/ApEditRun.js"></script>
+    <style type="text/css">
+        .run-btn-container {
+            position: fixed;
+            background-color: #808080;
+            border-top: 1px solid #cecece;
+            width: 100%;
+            bottom: 0;
+            margin-top: 12px;
+        }
+
+        .hvr-ripple-out:before {
+            border: #5cb85c solid 6px;
+        }
+
+        #iframeResponse {
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
+
+        #slide-left-btn {
+            position: absolute;
+            right: 0;
+            top: 40%;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 0;
+            font-family: Verdana;
+        }
+
+        .area-tab-btn.active {
+            border: 2px solid #237e23;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var codeSectionWidth = $('#left-code-section').width();
+            var responseWidth = $('#iframeContainer').width();
+
+            $('#slide-left-btn').click(function (e) {
+                $(this).attr('disabled', 'disabled');
+                var icon = $(this).children('i').first();
+                var parent = $('#left-code-section').parent();
+                if (icon.is('.glyphicon-circle-arrow-left')) {
+                    $('#left-code-section').animate({ width: '8%' }, function () {
+                        $('#iframeContainer').width('91%')
+                    });
+                    icon.removeClass('glyphicon-circle-arrow-left').addClass('glyphicon-circle-arrow-right');
+                }
+                else {
+                    $('#left-code-section').animate({ width: '45%' }, function () {
+                        $('#iframeContainer').width('54%')
+                    });
+                    icon.removeClass('glyphicon-circle-arrow-right').addClass('glyphicon-circle-arrow-left');
+                }
+                $(this).removeAttr('disabled');
+            })
+            function GenerateOutput(newTab) {
+                var ifr = $("<iframe>").attr({ "frameborder": "0", "id": "iframeResponse", "name": "iframeResponse" });
+
+                $("#iframeContainer").empty().append(ifr);
+
+
+                var src = $('#html-src-div').html();
+                $('#html_code').val(src.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&'));
+
+                $('#css_code').val($('#css-src-textarea').val());
+                $('#js_code').val($('#js-src-textarea').val());
+
+                $('#html_code_frm')[0].action = '/home/GetDynamicHTMLResult?r=' + Math.random();
+                $('#html_code_frm')[0].method = "post";
+                $('#html_code_frm')[0].acceptCharset = "utf-8";
+                $('#html_code_frm')[0].target = newTab ? "_blank" : "iframeResponse";
+                $('#html_code_frm')[0].submit();
+            }
+            GenerateOutput();
+
+            $('#html-src-div').keypress(function (e) {
+                //var src = $(this).html();
+                //var h = src.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/<br>/g, '').replace(/<br \/>/g, '').replace(/<div>/g, '').replace(/<\/div>/g, '');
+
+                //$('#html-target-iframe').attr('srcdoc', h);
+            });
+            $('.run-html-btn').click(function (e) {
+                GenerateOutput();
+            });
+            $('.run-html-btn-new-window').click(function (e) {
+                GenerateOutput(true);
+            });
+
+            $('.area-tab-btn').click(function (e) {
+                $('#html-src-div,#css-src-div,#js-src-div').hide();
+                var t = $(this).data('target');
+                $('.area-tab-btn').removeClass('active');
+                $(this).addClass('active');
+                $(t).fadeIn();
+            });
+        });
+    </script>
+</body>
+</html>
+@functions{
+
+}

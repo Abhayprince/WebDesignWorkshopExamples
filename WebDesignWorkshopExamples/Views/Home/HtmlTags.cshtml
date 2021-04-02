@@ -1,0 +1,907 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Html Tags</title>
+
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body style="font-size: 16px; font-family: Verdana">
+    <br /><br />
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th class="text-center"><h2>HTML Tags</h2></th>
+                <th class="text-center"><h2>Output</h2></th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong>Heading Tags - h1 to h6 </strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <pre contenteditable="true" id="h1-src">&lt;h1&gt;This is h1 Heading&lt;/h1&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#h1-src" data-target="#h1-out">Run</button>
+                </td>
+                <td id="h1-out">
+                    <h1>This is h1 Heading</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <pre contenteditable="true" id="h2-src">&lt;h2&gt;This is h2 Heading&lt;/h2&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#h2-src" data-target="#h2-out">Run</button>
+                </td>
+                <td id="h2-out">
+                    <h2>This is h2 Heading</h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <pre contenteditable="true" id="h3-src">&lt;h3&gt;This is h3 Heading&lt;/h3&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#h3-src" data-target="#h3-out">Run</button>
+                </td>
+                <td id="h3-out">
+                    <h3>This is h3 Heading</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <pre contenteditable="true" id="h4-src">&lt;h4&gt;This is h4 Heading&lt;/h4&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#h4-src" data-target="#h4-out">Run</button>
+                </td>
+                <td id="h4-out">
+                    <h4>This is h4 Heading</h4>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <pre contenteditable="true" id="h5-src">&lt;h5&gt;This is h5 Heading&lt;/h5&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#h5-src" data-target="#h5-out">Run</button>
+                </td>
+                <td id="h5-out">
+                    <h5>This is h5 Heading</h5>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <pre contenteditable="true" id="h6-src">&lt;h6&gt;This is h6 Heading&lt;/h6&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#h6-src" data-target="#h6-out">Run</button>
+                </td>
+                <td id="h6-out">
+                    <h6>This is h6 Heading</h6>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Paragraph Tag - p</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="p-src">&lt;p&gt;TEKATION is a part of SoftCopy IT Services Pvt Ltd. We at tekation 
+believe in "SPREADING THE KNOWLEDGE FOR FUTURE"&lt;/p&gt;
+&lt;p&gt;We provide Industrial Training on Latest Technologies like Java, 
+.Net, Android,PHP and Web Design etc. We have a very different 
+way of training, We belive in practical knowledge not in theoritical 
+knowledge, so we focus more on practicing rather than rattafication 
+of long written theoritical knowledge.&lt;/p&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#p-src" data-target="#p-out">Run</button>
+                </td>
+                <td id="p-out">
+                    <p>
+                        TEKATION is a part of SoftCopy IT Services Pvt Ltd.
+                        We at tekation believe in "SPREADING THE KNOWLEDGE FOR FUTURE"
+                    </p>
+                    <p>
+                        We provide Industrial Training on Latest Technologies like Java, .Net, Android, PHP and Web Design etc. We have a very different way of training, We belive in practical knowledge not in theoritical knowledge, so we focus more on practicing rather than rattafication of long written theoritical knowledge.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Anchor Tag - a</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="a-src">&lt;a href="http://www.tekation.com"&gt;This is an Anchor Tag&lt;/a&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#a-src" data-target="#a-out">Run</button>
+                </td>
+                <td>
+                    <p id="a-out">
+                        <a href="http://www.tekation.com">This is an Anchor Tag</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="a1-src">
+&lt;a href="http://www.tekation.com" title="Industrial Training in Ghaziabad"&gt;
+    This is an Anchor Tag with Title Attribute
+&lt;/a&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#a1-src" data-target="#a1-out">Run</button>
+                </td>
+                <td>
+                    <p id="a1-out">
+                        <a href="http://www.tekation.com" title="Industrial Training in Ghaziabad">This is an Anchor Tag with Title Attribute</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="a2-src">
+&lt;a href="http://www.tekation.com" title="Industrial Training in Ghaziabad" 
+target="_blank"&gt;
+    This is an Anchor Tag with Target Next Page
+&lt;/a&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#a2-src" data-target="#a2-out">Run</button>
+                </td>
+                <td>
+                    <p id="a2-out">
+                        <a href="http://www.tekation.com" title="Industrial Training in Ghaziabad" target="_blank">This is an Anchor Tag with Target Next Page</a>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Line Break Tag - br</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="br-src">
+Web &lt;br /&gt; Design &lt;br/&gt; And &lt;br /&gt; Development &lt;br /&gt; Workshop
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#br-src" data-target="#br-out">Run</button>
+                </td>
+                <td>
+                    <p id="br-out">
+                        Web<br /> Design<br /> And<br />Development<br /> Workshop
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Horizontal Rule Tag - hr</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="hr-src">
+    &lt;hr /&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#hr-src" data-target="#hr-out">Run</button>
+                </td>
+                <td>
+                    <p id="hr-out">
+                        <hr />
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Image Tag - img</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="img-src">
+    &lt;img src="/images/hill-top.jpeg" alt="Hill Top Image" /&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#img-src" data-target="#img-out">Run</button>
+                </td>
+                <td>
+                    <p id="img-out">
+                        <img src="/images/hill-top.jpeg" alt="Hill Top Image" height="200" width="350" />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="img1-src">
+    &lt;img src="/images/tek-logo.jpg" alt="Tekation Logo Image" /&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#img1-src" data-target="#img1-out">Run</button>
+                </td>
+                <td>
+                    <p id="img1-out">
+                        <img src="/images/tek-logo.jpg" alt="Tekation Logo Image" />
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Unordered List - ul</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ul-src">
+&lt;ul&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ul-src" data-target="#ul-out">Run</button>
+                </td>
+                <td>
+                    <div id="ul-out">
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ul1-src">
+&lt;ul type="sqaure"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ul1-src" data-target="#ul1-out">Run</button>
+                </td>
+                <td>
+                    <div id="ul1-out">
+                        <ul type="square">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ul2-src">
+&lt;ul type="disc"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ul2-src" data-target="#ul2-out">Run</button>
+                </td>
+                <td>
+                    <div id="ul2-out">
+                        <ul type="disc">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ul3-src">
+&lt;ul type="circle"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ul3-src" data-target="#ul3-out">Run</button>
+                </td>
+                <td>
+                    <div id="ul3-out">
+                        <ul type="circle">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ul4-src">
+&lt;ul type="none"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ul4-src" data-target="#ul4-out">Run</button>
+                </td>
+                <td>
+                    <div id="ul4-out">
+                        <ul type="none">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Ordered List - ol</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ol-src">
+&lt;ol&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ol-src" data-target="#ol-out">Run</button>
+                </td>
+                <td>
+                    <div id="ol-out">
+                        <ol>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ol>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ol1-src">
+&lt;ol type="A"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ol1-src" data-target="#ol1-out">Run</button>
+                </td>
+                <td>
+                    <div id="ol1-out">
+                        <ol type="A">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ol>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ol2-src">
+&lt;ol type="i"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ol2-src" data-target="#ol2-out">Run</button>
+                </td>
+                <td>
+                    <div id="ol2-out">
+                        <ol type="i">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ol>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ol3-src">
+&lt;ol type="a"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ol3-src" data-target="#ol3-out">Run</button>
+                </td>
+                <td>
+                    <div id="ol3-out">
+                        <ol type="a">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ol>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="ol4-src">
+&lt;ol start="3"&gt; 
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ol4-src" data-target="#ol4-out">Run</button>
+                </td>
+                <td>
+                    <div id="ol4-out">
+                        <ol start="3">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ol>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Description List - dl</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="dl-src">
+&lt;dl&gt; 
+    &lt;dt&gt;Tekation&lt; /dt&gt;
+        &lt;dd&gt;An ISO Certified Industrial Training Center in Ghaziabad&lt;/dd&gt;
+    &lt;dt&gt;Web Design & Development&lt;/dt&gt;
+        &lt;dd&gt;HTML + HTML5 + CSS + CSS3 + JavaScript + jQuery + Bootstrap&lt;/dd&gt;
+&lt;/dl&gt;
+                    </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#dl-src" data-target="#dl-out">Run</button>
+                </td>
+                <td>
+                    <div id="dl-out">
+                        <dl>
+                            <dt>
+                                Tekation
+                            </dt>
+                            <dd>An ISO Certified Industrial Training Center in Ghaziabad</dd>
+                            <dt>
+                                Web Design & Development
+                            </dt>
+                            <dd>HTML + HTML5 + CSS + CSS3 + JavaScript + jQuery + Bootstrap</dd>
+                        </dl>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Fomatting Tags/Elements - b, i, u, sub, sup, small</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="b-src">This is &lt;b&gt;Bold&lt;/b&gt; Text</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#b-src" data-target="#b-out">Run</button>
+                </td>
+                <td>
+                    <p id="b-out">
+                        This is <b>Bold</b> Text
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="i-src">This is &lt;i&gt;Italic&lt;/i&gt; Text</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#i-src" data-target="#i-out">Run</button>
+                </td>
+                <td>
+                    <p id="i-out">
+                        This is <i>Italic</i> Text
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="u-src">This is &lt;u&gt;Underlined&lt;/u&gt; Text</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#u-src" data-target="#u-out">Run</button>
+                </td>
+                <td>
+                    <p id="u-out">
+                        This is <u>Underlined</u> Text
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="del-src">This is &lt;del&gt;Deleted&lt;/del&gt; Text</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#del-src" data-target="#del-out">Run</button>
+                </td>
+                <td>
+                    <p id="del-out">
+                        This is <del>Deleted</del> Text
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="sup-src">This is &lt;sup&gt;Superscripted&lt;/sup&gt; Text
+x&lt;sup&gt;2&lt;/sup&gt;+y&lt;sup&gt;2&lt;/sup&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#sup-src" data-target="#sup-out">Run</button>
+                </td>
+                <td>
+                    <p id="sup-out">
+                        This is <sup>Superscripted</sup> Text
+                        <br />
+                        x<sup>2</sup>+y<sup>2</sup>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="sub-src">This is &lt;sub&gt;Subscripted &lt;/sub&gt; Text
+log&lt;sub&gt;10&lt;/sub&gt;</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#sub-src" data-target="#sub-out">Run</button>
+                </td>
+                <td>
+                    <p id="sub-out">
+                        This is <sub>Subscripted</sub> Text
+                        <br />
+                        log<sub>10</sub>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="small-src">Normal Text including &lt;small&gt;small&lt;/small&gt; Text</pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#small-src" data-target="#small-out">Run</button>
+                </td>
+                <td>
+                    <p id="small-out">
+                        Normal Text including <small>small</small> Text
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Tables - table, tr, th, td, rowspan, colspan</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="t-src"> 
+    &lt;table border="1"&gt;
+        &lt;tr>
+            &lt;td>Row 1 Col 1&lt;/td&gt;
+            &lt;td>Row 1 Col 2&lt;/td&gt;
+            &lt;td>Row 1 Col 3&lt;/td&gt;
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Row 2 Col 1&lt;/td&gt;
+            &lt;td>Row 2 Col 2&lt;/td&gt;
+            &lt;td>Row 2 Col 3&lt;/td&gt;
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Row 3 Col 1&lt;/td&gt;
+            &lt;td>Row 3 Col 2&lt;/td&gt;
+            &lt;td>Row 3 Col 3&lt;/td&gt;
+        &lt;/tr>
+    &lt;/table&gt;
+                </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#t-src" data-target="#t-out">Run</button>
+                </td>
+                <td id="t-out">
+                    <table border="1">
+                        <tr>
+                            <td>Row 1 Col 1</td>
+                            <td>Row 1 Col 2</td>
+                            <td>Row 1 Col 3</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Col 1</td>
+                            <td>Row 2 Col 2</td>
+                            <td>Row 2 Col 3</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3 Col 1</td>
+                            <td>Row 3 Col 2</td>
+                            <td>Row 3 Col 3</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="t1-src"> 
+    &lt;table border="1"&gt;
+        &lt;tr>
+            &lt;th&gt;Head 1&lt;/th&gt;
+            &lt;th&gt;Head 2&lt;/th&gt;
+            &lt;th&gt;Head 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Col 1&lt;/td&gt;
+            &lt;td&gt;Col 2&lt;/td&gt;
+            &lt;td&gt;Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+                </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#t1-src" data-target="#t1-out">Run</button>
+                </td>
+                <td id="t1-out">
+                    <table border="1">
+                        <tr>
+                            <th>Head 1</th>
+                            <th>Head 2</th>
+                            <th>Head 3</th>
+                        </tr>
+                        <tr>
+                            <td>Col 1</td>
+                            <td>Col 2</td>
+                            <td>Col 3</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="t2-src"> 
+    &lt;table border="1"&gt;
+        &lt;tr>
+            &lt;td colspan="2"&gt; 2 Column Merged &lt;/td&gt;
+            &lt;td&gt;Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Col 1&lt;/td&gt;
+            &lt;td&gt;Col 2&lt;/td&gt;
+            &lt;td&gt;Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+                </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#t2-src" data-target="#t2-out">Run</button>
+                </td>
+                <td id="t2-out">
+                    <table border="1">
+                        <tr>
+                            <td colspan="2"> 2 Column Merged </td>
+                            <td>Col 3</td>
+                        </tr>
+                        <tr>
+                            <td>Col 1</td>
+                            <td>Col 2</td>
+                            <td>Col 3</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="t3-src"> 
+    &lt;table border="1"&gt;
+        &lt;tr>
+            &lt;td rowspan="3"&gt; 3 Merged Rows &lt;/td&gt;
+            &lt;td&gt;Row 1 Col 2 &lt;/td&gt;
+            &lt;td&gt;Row 1 Col 3 &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 2 Col 2&lt;/td&gt;
+            &lt;td&gt;Row 3 Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 3 Col 2&lt;/td&gt;
+            &lt;td&gt;Row 3 Col 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+                </pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#t3-src" data-target="#t3-out">Run</button>
+                </td>
+                <td id="t3-out">
+                    <table border="1">
+                        <tr>
+                            <td rowspan="3"> 3 Merged Rows </td>
+                            <td>Row 1 Col 2 </td>
+                            <td>Row 1 Col 3 </td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Col 2 </td>
+                            <td>Row 2 Col 3 </td>
+                        </tr>
+                        <tr>
+                            <td>Row 3 Col 2 </td>
+                            <td>Row 3 Col 3 </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>Marquee Tag</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    <pre contenteditable="true" id="mrq-src">&lt;marquee>Hi, This is moving text&lt;/marquee></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#mrq-src" data-target="#mrq-out">Run</button>
+                </td>
+                <td>
+                    <p id="mrq-out">
+                        <marquee>Hi, This is moving text</marquee>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <strong>HTML Form Elements - input, textarea, button, select</strong>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    Textbox
+                    <pre contenteditable="true" id="text-src">&lt;input type="text" /></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#text-src" data-target="#text-out">Run</button>
+                </td>
+                <td>
+                    <p id="text-out">
+                        <input type="text" />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    Textarea
+                    <pre contenteditable="true" id="textarea-src">&lt;textarea rows="4">&lt;/textarea></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#textarea-src" data-target="#textarea-out">Run</button>
+                </td>
+                <td>
+                    <p id="textarea-out">
+                        <textarea rows="4"></textarea>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    Checkbox
+                    <pre contenteditable="true" id="chk-src">&lt;input type="checkbox" id="chk" /> &lt;label for="chk"> Checkbox &lt;label></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#chk-src" data-target="#chk-out">Run</button>
+                </td>
+                <td>
+                    <p id="chk-out">
+                        <input type="checkbox" id="chk" /><label for="chk"> Checkbox </label>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    Radio Buttons
+                    <pre contenteditable="true" id="rdo-src">&lt;input type="radio" id="rd1" name="rd" /> &lt;label for="rd1"> Radio 1 &lt;label>
+&lt;input type="radio" id="rd2" name="rd" /> &lt;label for="rd2"> Radio 2 &lt;label>
+&lt;input type="radio" id="rd3" name="rd" /> &lt;label for="rd3"> Radio 3 &lt;label></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#rdo-src" data-target="#rdo-out">Run</button>
+                </td>
+                <td>
+                    <p id="rdo-out">
+                        <input type="radio" id="rd1" name="rd" /><label for="rd1"> Radio 1 </label>
+                        <input type="radio" id="rd2" name="rd" /><label for="rd2"> Radio 2 </label>
+                        <input type="radio" id="rd3" name="rd" /><label for="rd3"> Radio 3 </label>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    Dropdown List - Select Option
+                    <pre contenteditable="true" id="ddl-src">&lt;select>
+    &lt;option>Select Technology&lt;/option>
+    &lt;option>Java&lt;/option>
+    &lt;option>Android&lt;/option>
+    &lt;option>.Net&lt;/option>
+&lt;/select></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#ddl-src" data-target="#ddl-out">Run</button>
+                </td>
+                <td>
+                    <p id="ddl-out">
+                        <select>
+                            <option>Select Technology</option>
+                            <option>Java</option>
+                            <option>Android</option>
+                            <option>.Net</option>
+                            <option>Web Design & Development</option>
+                            <option>iPhone Development</option>
+                        </select>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-left">
+                    Buttons
+                    <pre contenteditable="true" id="btn-src">&lt;input type="button" value="Input Button" />
+&lt;input type="submit" value="Submit Button" />
+&lt;input type="reset" value="Reset Button" />
+&lt;button type="button">Button type Button&lt;/button></pre>
+                    <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#btn-src" data-target="#btn-out">Run</button>
+                </td>
+                <td>
+                    <p id="btn-out">
+                        <input type="button" value="Input Button" />
+                        <input type="submit" value="Submit Button" />
+                        <input type="reset" value="Reset Button" />
+                        <button type="button">Button type Button</button>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br /><br />
+    <ul id="nav-btns" type="none">
+        <li>
+            <a href="/home/htmltags" class="btn btn-primary">HTML Tags</a>
+        </li>
+        <li>
+            <a href="/home/htmlform" class="btn btn-warning">HTML Form</a>
+        </li>
+        <li>
+            <a href="/home/AudioVideo" class="btn btn-success">Audio & Video</a>
+        </li>
+        <li>
+            <a href="/home/CssStyle" class="btn btn-info">CSS Style</a>
+        </li>
+        <li>
+            <a href="/home/JavaScript" class="btn btn-danger">JavaScript</a>
+        </li>
+        <li>
+            <a href="/home/checkallcssformat" class="btn btn-warning">CSS Formating and Check All Example</a>
+        </li>
+        <li>
+            <a href="/home/Alertify" class="btn btn-success">Custom Alerts</a>
+        </li>
+        <li>
+            <a href="/home/TraditionalWebsite" class="btn btn-default">Traditional Website</a>
+        </li>
+    </ul>
+    <style type="text/css">
+        #nav-btns {
+            list-style-type: none;
+        }
+
+            #nav-btns li {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+                #nav-btns li a {
+                    border-radius: 0;
+                }
+    </style>
+    <br /><br />
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/js/ApEditRun.js"></script>
+</body>
+</html>

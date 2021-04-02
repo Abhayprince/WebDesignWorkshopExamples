@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Style</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />  
+    <link href="~/libs/animate.css" rel="stylesheet" />
+</head>
+<body>
+    <br /><br /><br />
+    <div class="container">
+        <div class="col-md-4">
+            <h2>HTML Code</h2>
+            <pre contenteditable="true" id="html-code-src" style="min-height: 200px;"></pre>
+            <button type="button" class="btn btn-sm btn-warning generate-output-btn" data-source="#html-code-src" data-target="#output">Run HTML</button>
+        </div>
+        <div class="col-md-4">
+            <h2>Output</h2>
+            <div id="output" style="border: 1px solid #808080; min-height: 200px;">
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>CSS</h2>
+            <pre contenteditable="true" id="css-code-src" style="min-height: 200px;"></pre>
+            <button type="button" class="btn btn-sm btn-success run-css-btn" data-source="#css-code-src">Run CSS</button>
+        </div>
+    </div>
+    <br /><br /><br />
+    <br /><br />
+    <ul id="nav-btns" type="none">
+        <li>
+            <a href="/home/htmltags" class="btn btn-primary">HTML Tags</a>
+        </li>
+        <li>
+            <a href="/home/htmlform" class="btn btn-warning">HTML Form</a>
+        </li>
+        <li>
+            <a href="/home/AudioVideo" class="btn btn-success">Audio & Video</a>
+        </li>
+        <li>
+            <a href="/home/CssStyle" class="btn btn-info">CSS Style</a>
+        </li>
+        <li>
+            <a href="/home/JavaScript" class="btn btn-danger">JavaScript</a>
+        </li>
+        <li>
+            <a href="/home/checkallcssformat" class="btn btn-warning">CSS Formating and Check All Example</a>
+        </li>
+        <li>
+            <a href="/home/Alertify" class="btn btn-success">Custom Alerts</a>
+        </li>
+        <li>
+            <a href="/home/TraditionalWebsite" class="btn btn-default">Traditional Website</a>
+        </li>
+    </ul>
+    <style type="text/css">
+        #nav-btns {
+            list-style-type: none;
+        }
+
+            #nav-btns li {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+                #nav-btns li a {
+                    border-radius: 0;
+                }
+    </style>
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/js/ApEditRun.js"></script>
+    <script type="text/javascript" id="run-script"></script>
+</body>
+</html>

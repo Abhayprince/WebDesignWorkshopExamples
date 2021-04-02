@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Audio Video</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />    
+</head>
+<body>
+    <br /><br /><br />
+    <div class="container">
+        <h2>HTML5 Audio Element</h2>
+        <div class="col-md-6">
+            <pre contenteditable="true" id="audio-element-source">&lt;audio controls muted autoplay loop>
+&lt;source src="/content/we_own_it.mp3" type="audio/mpeg" />
+&lt;source src="/content/we_own_it.ogg" type="audio/ogg" />
+&lt;source src="/content/we_own_it.wav" type="audio/wav" />
+Your browser does not support the audio element.
+&lt;/audio>
+</pre>
+            <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#audio-element-source" data-target="#audio-output">Run</button>
+        </div>
+        <div class="col-md-6" id="audio-output">
+            <audio controls autoplay muted>
+                <source src="/content/we_own_it.mp3" type="audio/mpeg" />
+                <source src="/content/we_own_it.ogg" type="audio/ogg" />
+                <source src="/content/we_own_it.wav" type="audio/wav" />
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="clearfix"></div>
+        <br /><br />
+        <hr />
+        <br />
+        <br />
+        <div class="clearfix"></div>
+        <h2>HTML5 Video Element</h2>
+        <div class="col-md-5">
+            <pre contenteditable="true" id="video-element-source">&lt;video controls loop width="500">
+&lt;source src="/content/ABCD_Muqabala.mp4" type="video/mp4">
+&lt;source src="/content/ABCD_Muqabala.webm" type="video/webm">
+&lt;source src="/content/ABCD_Muqabala.ogg" type="video/ogg">
+&lt;/video>
+</pre>
+            <button type="button" class="btn btn-xs btn-primary generate-output-btn" data-source="#video-element-source" data-target="#video-output">Run</button>
+        </div>
+        <div class="col-md-7" id="video-output">
+            <video controls loop width="500">
+                <source src="/content/ABCD_Muqabala.mp4" type="video/mp4">
+                <source src="/content/ABCD_Muqabala.webm" type="video/webm">
+                <source src="/content/ABCD_Muqabala.ogg" type="video/ogg">
+            </video>
+
+        </div>
+        <div class="clearfix"></div>
+        <br /><br />
+    </div>
+    <br /><br />
+    <ul id="nav-btns" type="none">
+        <li>
+            <a href="/home/htmltags" class="btn btn-primary">HTML Tags</a>
+        </li>
+        <li>
+            <a href="/home/htmlform" class="btn btn-warning">HTML Form</a>
+        </li>
+        <li>
+            <a href="/home/AudioVideo" class="btn btn-success">Audio & Video</a>
+        </li>
+        <li>
+            <a href="/home/CssStyle" class="btn btn-info">CSS Style</a>
+        </li>
+        <li>
+            <a href="/home/JavaScript" class="btn btn-danger">JavaScript</a>
+        </li>
+        <li>
+            <a href="/home/checkallcssformat" class="btn btn-warning">CSS Formating and Check All Example</a>
+        </li>
+        <li>
+            <a href="/home/Alertify" class="btn btn-success">Custom Alerts</a>
+        </li>
+        <li>
+            <a href="/home/TraditionalWebsite" class="btn btn-default">Traditional Website</a>
+        </li>
+    </ul>
+    <style type="text/css">
+        #nav-btns {
+            list-style-type: none;
+        }
+
+            #nav-btns li {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+                #nav-btns li a {
+                    border-radius: 0;
+                }
+    </style>
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/js/ApEditRun.js"></script>
+</body>
+</html>

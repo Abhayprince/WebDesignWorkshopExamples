@@ -1,0 +1,184 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alertify</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />  
+    
+    <link href="/libs/alertifyjs/css/alertify.min.css" rel="stylesheet" />
+    <link href="/libs/alertifyjs/css/themes/default.min.css" rel="stylesheet" />
+    <script src="/libs/alertifyjs/alertify.min.js"></script>
+
+    <link href="~/libs/animate.css" rel="stylesheet" />
+</head>
+<body>
+    <br /><br /><br />
+    <div class="container">
+        <div class="col-md-3 text-center">
+            <br />
+            <button type="button" class="btn btn-default" onclick="alert('Traditional Alert Box');">Default Alert</button>
+            <br /><br />
+            <button type="button" class="btn btn-success" onclick="alertify.alert('Custom Alert Box', 'This is a custom animated alert box.');">Custom Alert</button>
+            <br />
+        </div>
+        <div class="col-md-3 text-center">
+            <br />
+            <button type="button" class="btn btn-default" onclick="confirm('Are you sure?');">Confirm</button>
+            <br /><br />
+            <button type="button" class="btn btn-warning" onclick="alertify.confirm('Confirm', 'Are you sure?', function () { }, function () { })">Custom Confirm</button>
+            <br />
+            @*<button type="button" class="btn btn-warning" onclick="alertify.alert('Custom Alert Box', 'This is a custom animated alert box.');">Custom Confirm With Custom Buttons</button>
+            <br />*@
+        </div>
+        <div class="col-md-3 text-center">
+            <br />
+            <button type="button" class="btn btn-default" onclick="prompt('Enter Your Name');">Prompt Dialog</button>
+            <br /><br />
+            <button type="button" class="btn btn-primary" id="alertify-prompt-btn">Custom Prompt Dialog</button>
+            <br />
+        </div>
+        <div class="col-md-3 text-center">
+            <br />
+            <button type="button" class="btn btn-success" onclick="alertify.success('Successfully Logged Out');">Success Notify</button>
+            <br /><br />
+            <button type="button" class="btn btn-danger" onclick="alertify.error('There were some errors on this page.');">Error Notify</button>
+            <br />
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-offset-2 col-md-8">
+            <br /><br />
+            <div class="btn-group-sm">
+                <button type="button" data-apalert data-cls="default" data-txt="Default Alert Message" class="btn btn-sm btn-default">Default</button>
+                <button type="button" data-apalert data-cls="primary" data-txt="Primary Alert Message" class="btn btn-sm btn-primary">Primary</button>
+                <button type="button" data-apalert data-cls="success" data-txt="Success Alert Message" class="btn btn-sm btn-success">Success</button>
+                <button type="button" data-apalert data-cls="info" data-txt="Information Alert Message" class="btn btn-sm btn-info">Information</button>
+                <button type="button" data-apalert data-cls="warning" data-txt="Warning Alert Message" class="btn btn-sm btn-warning">Warning</button>
+                <button type="button" data-apalert data-cls="danger" data-txt="Error Alert Message" class="btn btn-sm btn-danger">Error</button>
+            </div>
+            <br />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <br /><br />
+    <ul id="nav-btns" type="none">
+        <li>
+            <a href="/home/htmltags" class="btn btn-primary">HTML Tags</a>
+        </li>
+        <li>
+            <a href="/home/htmlform" class="btn btn-warning">HTML Form</a>
+        </li>
+        <li>
+            <a href="/home/AudioVideo" class="btn btn-success">Audio & Video</a>
+        </li>
+        <li>
+            <a href="/home/CssStyle" class="btn btn-info">CSS Style</a>
+        </li>
+        <li>
+            <a href="/home/JavaScript" class="btn btn-danger">JavaScript</a>
+        </li>
+        <li>
+            <a href="/home/checkallcssformat" class="btn btn-warning">CSS Formating and Check All Example</a>
+        </li>
+        <li>
+            <a href="/home/Alertify" class="btn btn-success">Custom Alerts</a>
+        </li>
+        <li>
+            <a href="/home/TraditionalWebsite" class="btn btn-default">Traditional Website</a>
+        </li>
+    </ul>
+    <style type="text/css">
+        #nav-btns {
+            list-style-type: none;
+        }
+
+            #nav-btns li {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+                #nav-btns li a {
+                    border-radius: 0;
+                }
+    </style>
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/libs/bootstrap3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/libs/cbm.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('[data-apalert]').click(function (e) {
+                var t = $(this).data('txt');
+                var c = $(this).data('cls');
+
+                APCustomModal({
+                    title: 'Alert',
+                    headerClass: c,
+                    body: t,
+                    rightBtn1: 'OK',
+                    rightBtn1Class: c,
+                    rightBtn1Callback: undefined,
+                    escClose: true,
+                    outsideClickClose: false
+                });
+            });
+
+            $('#alertify-prompt-btn').click(function (e) {
+                alertify.prompt("Custom Prompt", "This is custom animated prompt dialog", 'Enter Your Name', function (e, v) {
+                    apSuccessAlert('You have entered "'+v+'".', 'Hi : ' + v);
+                    }, function () {
+                        apErrorAlert('You entered Cancel', 'Cancel');
+                    });
+            });
+
+            function apSuccessAlert(error, title, okCallback) {
+                title = title ? title : 'Alert';
+                okCallback ? okCallback : undefined;
+                APCustomModal({
+                    title: title,
+                    headerClass: 'success',
+                    body: error,
+                    rightBtn1: 'OK',
+                    rightBtn1Class: 'success',
+                    rightBtn1Callback: okCallback,
+                    escClose: true,
+                    outsideClickClose: true
+                });
+            }
+            function apErrorAlert(error, title, okCallback) {
+                title = title ? title : 'Alert';
+                okCallback ? okCallback : undefined;
+                APCustomModal({
+                    title: title,
+                    headerClass: 'danger',
+                    body: error,
+                    rightBtn1: 'OK',
+                    rightBtn1Class: 'danger',
+                    rightBtn1Callback: okCallback,
+                    escClose: true,
+                    outsideClickClose: true
+                });
+            }
+
+        });
+        //alertify.prompt('Hello', "This is custom Prompt Dialog Box", 'Your Name');
+
+        //alertify.prompt("Custom Prompt", "This is custom animated prompt dialog", 'Enter your name', function (e, v) {
+        //    apSuccessAlert('Hi : ' + v, 'OK');
+        //}, function () {
+        //    apErrorAlert('You entered Cancel', 'Cancel');
+        //});
+
+        //alertify.alert('Custom Alert Box', 'This is a custom animated alert box.');
+
+        //alertify.confirm('hi', 'hello', function () { }, function () { })
+
+        //alertify.success('Successfully Logged Out');
+        //alertify.error('There were some errors on this page.');
+    </script>
+</body>
+</html>

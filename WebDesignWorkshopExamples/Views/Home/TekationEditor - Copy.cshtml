@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tekation Editor</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/libs/animate.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <div class="container">
+        <div class="col-md-7">
+            <h2>HTML Code</h2>
+            <div contenteditable="true" id="html-code-src" style="min-height: 200px; border: 1px solid #d4d4d4;"></div>
+            <button type="button" class="btn btn-sm btn-warning generate-output-btn" data-source="#html-code-src" data-target="#output">Run HTML</button>
+        </div>
+        <div class="col-md-5">
+            <h2>CSS</h2>
+            <div contenteditable="true" id="css-code-src" style="min-height: 200px; border: 1px solid #d4d4d4;"></div>
+            <button type="button" class="btn btn-sm btn-success run-css-btn" data-source="#css-code-src">Run CSS</button>
+        </div>
+    </div>
+    <br />
+    <div class="container-fluid" id="output" style="border: 1px solid #d4d4d4; min-height: 200px;">
+
+    </div>
+    <br />
+    <div class="container">
+        <div class="col-md-12">
+            <h2>JS</h2>
+            <div contenteditable="true" id="js1-code-src" style="min-height: 200px;border: 1px solid #d4d4d4;"></div>
+            <button type="button" class="btn btn-sm btn-success run-script-btn" data-source="#js1-code-src">Run JS</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <br /><br />
+
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/js/ApEditRun.js"></script>
+    <script type="text/javascript" id="run-script"></script>
+</body>
+</html>

@@ -1,0 +1,932 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/libs/css-hover/hover-min.css" rel="stylesheet" />
+    <style type="text/css">
+        .main-topics-list
+        {
+
+        }
+        .main-topics-list li,.main-topics-list li:first-child,.main-topics-list li:last-child
+        {
+            padding: 0;
+            border-radius: 0;
+        }
+        .main-topics-list li a
+        {
+            display: block;
+            padding: 10px 15px;
+            font-family: Verdana;
+            font-size: 16px;
+            color: #333;
+        }
+        .main-topics-list li a:hover
+        {
+            text-decoration: none;
+            background: #ff6a00;
+            color: #fff;
+        }
+
+        .nav-btns{
+                list-style-type: none;
+            }
+            .nav-btns li{
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            .nav-btns li a,.nav-btns li button{
+                border-radius: 0;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-family: verdana;
+    min-width: 240px;
+            }
+
+            .main-content-body
+            {
+                padding: 15px;
+            }
+
+            .sub-topics
+            {
+                display: none;
+            }
+
+            .modal-body
+            {
+                font-family: Verdana;
+                font-size: 15px;
+            }
+            .modal-body  li
+            {
+                margin-bottom: 15px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="background: #666; color: #fff; font-size:20px;">
+        <div class="container" style=" padding: 5px 0;">
+            <div class="col-sm-3">
+                <label class="pull-left">TEKATION</label>
+            </div>
+            <div class="col-sm-5">
+                <label class="text-center">
+                    Workshop on 
+                    <big>Web Design & Development</big>
+                </label>
+            </div>
+            <div class="col-sm-4">
+                <label class="pull-right" style="font-size: 16px; margin-top: 5px">
+                    <span style="margin-right: 15px;"><i class="glyphicon glyphicon-phone"></i> 0120 2406024 </span>
+                    <span><i class="glyphicon glyphicon-globe"></i> www.tekation.com</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="list-group main-topics-list">
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-bottom main-topic-btn" title="Introduction to Web" data-target="#introduction-top-web-subtopics">Introduction to Web</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-right main-topic-btn" title="HTML" data-target="#html-subtopics">HTML</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-top main-topic-btn" title="CSS" data-target="#css-subtopics">CSS</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-left main-topic-btn" title="HTML5" data-target="#html5-subtopics">HTML5</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-bottom main-topic-btn" title="CSS3" data-target="#css3-subtopics">CSS3</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-right main-topic-btn" title="BootStrap CSS" data-target="#bscss-subtopics">BootStrap CSS</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-top main-topic-btn" title="FontAwesome" data-target="#fa-subtopics">FontAwesome</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-left main-topic-btn" title="JavaScript" data-target="#js-subtopics">JavaScript</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-bottom main-topic-btn" title="jQuery" data-target="#jq-subtopics">jQuery</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-right main-topic-btn" title="BootstrapJS" data-target="#bsjs-subtopics">Bootstrap JS</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div class="main-content-body">
+                    <div class="sub-topics" id="introduction-top-web-subtopics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="#" class="btn btn-primary hvr-rotate" data-target="#what-is-web-modal" data-toggle="modal">What is Web?</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-warning hvr-rotate" data-target="#web-browser-modal" data-toggle="modal">Web Browser</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-info hvr-rotate" data-toggle="modal" data-target="#url-uri-urn-modal">URL, URI & URN</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-danger hvr-rotate" data-toggle="modal" data-target="#types-of-website-modal">Types of Websites - Static & Dynamic</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-topics" id="html-subtopics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="#" class="btn btn-primary hvr-wobble-skew" data-toggle="modal" data-target="#intro-to-html-modal">Introduction to HTML</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-skew" target="_blank">HTML Tags</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-skew" target="_blank">HTML Form</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-info hvr-wobble-skew" data-target="#meta-tags-modal" data-toggle="modal">Meta Tags</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-warning hvr-wobble-skew" data-target="#html-comments-modal" data-toggle="modal">HTML Comments</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationeditor" class="btn btn-info hvr-wobble-skew" target="_blank">Tekation Editor</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="css-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <button type="button" class="btn btn-primary hvr-wobble-bottom" data-toggle="modal" data-target="#intro-to-css-modal">Introduction to CSS</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-warning hvr-wobble-bottom" data-toggle="modal" data-target="#css-syntax-modal">CSS Sytax</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-info hvr-wobble-bottom" data-toggle="modal" data-target="#css-selectors-modal">Selectors</button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-danger hvr-wobble-bottom" data-toggle="modal" data-target="#levels-of-css-modal">Levels/Types of CSS</button>
+                            </li>
+                            <li>
+                                <a href="~/html/Css-Color-Backgrounds.html" target="_blank" class="btn btn-info hvr-wobble-bottom">Color & Backgrounds</a>
+                            </li>
+                            <li>
+                                <a href="~/Html/Css-fonts-formatting.html" target="_blank" class="btn btn-warning  hvr-wobble-bottom">Fonts & Formatting</a>
+                            </li>
+                            <li>
+                                <a href="~/html/Css-borders.html" target="_blank" class="btn btn-warning hvr-wobble-bottom">Borders</a>
+                            </li>
+                            <li>
+                                <a href="~/Html/Css-margin-padding.html" target="_blank" class="btn btn-primary hvr-wobble-bottom">Margin & Padding</a>
+                            </li>
+                            <li>
+                                <a href="~/Html/Css-display-visibility.html" target="_blank" class="btn btn-success hvr-wobble-bottom">Display & Visibility</a>
+                            </li>
+                            <li>
+                                <a href="~/Html/Css-Cursor-styles.html" target="_blank" class="btn btn-info hvr-wobble-bottom">Cursor Styles</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationeditor" class="btn btn-danger hvr-wobble-bottom" target="_blank">Tekation Editor</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="html5-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-top">Introduction to HTML5</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-top">vs HTML</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-top">Removed Elements in HTML5</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-top">New Tags/Elements in HTML5</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-warning hvr-wobble-top">New Attributes in HTML 5</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-top">Audio & Video</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-primary hvr-wobble-top">Canvas</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-top">SVG</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-success hvr-wobble-top">Web Storage</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="css3-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-horizontal">Introduction to CSS3</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-horizontal">Repsonsive Designs & Media Query </a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-horizontal">New Properties in CSS3</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-horizontal">Transform 2D & 3D</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-horizontal">Transition</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-warning hvr-wobble-horizontal">Animations</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="bscss-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-bottom">Introduction to Bootstrap</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-bottom">Grid System</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-bottom">Typography</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-bottom">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-bottom">Forms</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-warning hvr-wobble-bottom">Glyphicons</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="fa-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-bounce-out">Introduction to Font Awesome</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-bounce-out">Font Awesome Icons</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="js-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-skew">Introduction to JavaSript</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-skew">Basics of JavaScript</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-skew">Popup Boxes</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-skew">Data Types</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-skew">Events</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-skew">DOM Manipulation</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-skew">CSS Handling using JavaScript</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-warning hvr-wobble-skew">Regular Expression</a>
+                            </li>
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-skew">Form Validation</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-skew">Cookies</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-skew">Session & Local Storage</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-wobble-skew">Debugging</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="jq-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-rotate">Introduction to jQuery</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-rotate">Selectors</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-rotate">Events</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-rotate">DOM Manipulation</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-rotate">CSS Handling using jQuery</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-danger hvr-rotate">Form Validation</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-rotate">Dynamic Elements</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-rotate">Effects</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-rotate">Chaining</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-warning hvr-rotate">Date/Time Calendar</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="bsjs-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-bottom">Introduction to Bootstrap JS</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-bottom">Modal</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-bottom">Dropdown</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-bottom">Tabs</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-bottom">Carousel</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="cdn-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-top">CDN - Content Delivery Network</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="devtool-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-back-pulse">Developer Tools</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="domainserverftp-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-top">Domain</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-wobble-top">Server</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-top">FTP Client</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-wobble-top">Godaddy Server Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="setting-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-buzz-out">Setting up a Website</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="publish-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-horizontal">Publishing a Website</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="tools-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-wobble-vertical">Custom Alerts & Popup Boxes</a>
+                            </li>
+                            <li>
+                                <a href="/home/tools_animations" class="btn btn-warning hvr-wobble-vertical">Animations</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-vertical">Hover Effects</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-vertical">Check All</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-vertical">Timer</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-wobble-vertical">Progress Bar</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="projects-subtopics" class="sub-topics">
+                        <ul class="nav-btns">
+                            <li>
+                                <a href="/home/introtohtml" class="btn btn-primary hvr-rotate">Autosuggestion</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-rotate">Text Formatter</a>
+                            </li>
+                            <li>
+                                <a href="/home/htmltags" class="btn btn-warning hvr-rotate">Filter Elements</a>
+                            </li>
+                            <li>
+                                <a href="/home/tekationhtmleditor" class="btn btn-info hvr-rotate">Elements Re-order</a>
+                            </li>
+                            <li>
+                                <a href="/home/Htmlform" class="btn btn-info hvr-rotate">Dynamic LOV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <ul class="list-group main-topics-list">
+
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-top main-topic-btn" title="CDN" data-target="#cdn-subtopics">CDN</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-left main-topic-btn" title="Developer Tool" data-target="#devtool-subtopics">Developer Tool</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-bottom main-topic-btn" title="Domain, Server & FTP Client" data-target="#domainserverftp-subtopics">Domain, Server & FTP Client</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-right main-topic-btn" title="Setting up a Website" data-target="#setting-subtopics">Setting up a Website</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-top main-topic-btn" title="Publishing Website/Project" data-target="#publish-subtopics">Publishing Website/Project</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-left main-topic-btn" title="Tools" data-target="#tools-subtopics">Tools</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="hvr-bounce-to-bottom main-topic-btn" title="Mini Projects" data-target="#projects-subtopics">Mini Project</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/home/about-us" class="hvr-bounce-to-bottom main-topic-btn" title="About us">About us</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <br /><br />
+    <div class="container">
+        <ul id="nav-btns" type="none">
+            <li>
+                <a href="/home/htmltags" class="btn btn-primary">HTML Tags</a>
+            </li>
+            <li>
+                <a href="/home/htmlform" class="btn btn-warning">HTML Form</a>
+            </li>
+            <li>
+                <a href="/home/AudioVideo" class="btn btn-success">Audio & Video</a>
+            </li>
+            <li>
+                <a href="/home/CssStyle" class="btn btn-info">CSS Style</a>
+            </li>
+            <li>
+                <a href="/home/JavaScript" class="btn btn-danger">JavaScript</a>
+            </li>
+            <li>
+                <a href="/home/checkallcssformat" class="btn btn-warning">CSS Formating and Check All Example</a>
+            </li>
+            <li>
+                <a href="/home/Alertify" class="btn btn-success">Custom Alerts</a>
+            </li>
+            <li>
+                <a href="/home/TraditionalWebsite" class="btn btn-default">Traditional Website</a>
+            </li>
+        </ul>
+        <style type="text/css">
+            #nav-btns{
+                list-style-type: none;
+            }
+            #nav-btns li{
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            #nav-btns li a{
+                border-radius: 0;
+            }
+        </style>
+    </div>
+
+    <!-- Modal Popup Sections  -->
+
+    <div id="what-is-web-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">What is Web?</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                The Web, or World Wide Web (W3), is basically a system of Internet servers that support special type of formatted documents called web pages.
+                            </li>
+                            <li>
+                                The documents are formatted in a markup language called HTML (HyperText Markup Language) that supports links to other documents, as well as
+                                graphics, audio, and video files.
+                            </li>
+                            <li>
+                                This means you can jump from one document to another simply by clicking on hot spots.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#web-browser-modal">Web Browsers</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="web-browser-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-warning">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Web Browsers</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        We can see and act on these web pages using Web Browsers.
+                        The purpose of a web browser (Chrome, IE, Firefox, Safari) is to read HTML documents and display them.
+                    </p>
+                    <p>
+                        <strong>Top Browsers</strong> – Chrome, Firefox, Safari, IE/Edge etc.
+                    </p>
+                    <p>
+                        <strong>Components of Web Browser</strong> – Address Bar, Status Bar, Developer Tools, Console
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal" data-toggle="modal" data-target="#url-uri-urn-modal">URL, URI & URN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="url-uri-urn-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-info">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">URL, URI & URN</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">
+                        <img src="~/images/url-uri-urn.png" />
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" data-target="#types-of-website-modal">Types of Websites</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="types-of-website-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Types of Websites</h4>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li>
+                            <strong>Basis of Data/Content</strong>
+                            <ol type="i">
+                                <li>Static Websites</li>
+                                <li>Dynamic Websites</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>Basis of Design</strong>
+                            <ol type="i">
+                                <li>Traditional/Non-Responsive Websites</li>
+                                <li>Responsive Websites</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>Basis of Navigation</strong>
+                            <ol type="i">
+                                <li>Single-Page Websites</li>
+                                <li>Multi-Page Websites</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro-to-html-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Introduction to HTML</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                HTML stands for Hyper Text Markup Language.
+                            </li>
+                            <li>
+                                HTML is the standard markup language for creating web pages and web applications.
+                            </li>
+                            <li>
+                                HTML was created by Berners-Lee in late 1991 but "HTML 2.0" was the first standard HTML specification which was published in 1995. 
+                            </li>
+                            <li>
+                                4.01 was a major version of HTML and it was published in late 1999. 
+                            </li>
+                            <li>
+                                Though HTML 4.01 version is widely used but currently we are having HTML-5 version which is an extension to HTML 4.01, and this version was published in 2012.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="/home/htmltags" type="button" class="btn btn-warning" target="_blank">HTML Tags</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="meta-tags-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-info">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Meta Tags</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                HTML lets you specify metadata - additional important information about a document in a variety of ways. 
+                            </li>
+                            <li>
+                                The META elements can be used to include name/value pairs describing properties of the HTML document, such as author, expiry date, a list of keywords, document author etc.
+                            </li>
+                            <li>
+                                <strong>Syntax : </strong> &lt;meta name="KEY_NAME" content="VALUE" />
+                            </li>
+                            <li>
+                                <strong>Meta Tags : </strong> title, meta description, keywords, author, application etc
+                            </li>
+                            <li>
+                                &lt;meta meta name="description" content="This page shows Workshop on Web Design & Development" />
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="#" type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#html-comments-modal">HTML Comments</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="html-comments-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-warning">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">HTML Comments</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        HTML comments are placed in between <!-- ... --> tags. <br />
+                        So, any content placed with-in <!-- ... --> tags will be treated as comment and will be completely ignored by the browser.
+                        <br /><br />
+                        <strong>Example : </strong> &lt;!-- Comment Text Here  -->
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="/home/tekationeditor" type="button" class="btn btn-info" target="_blank">Tekation Editor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro-to-css-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Introduction to CSS</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                CSS is the acronym for "Cascading Style Sheet". 
+                            </li>
+                            <li>
+                                CSS is a language that describes the style of an HTML document.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a href="#" type="button" class="btn btn-warning" data-dismiss="modal" data-target="#css-syntax-modal" data-toggle="modal">CSS Syntax</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="css-syntax-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-warning">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">CSS Syntax</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <pre>
+selector {
+    property1 : value;
+    property2 : value;
+}
+</pre>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal" data-target="#css-selectors-modal" data-toggle="modal">CSS Selectors</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="css-selectors-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-info">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">CSS Selectors</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <ul>
+                            <li>
+                                CSS selectors are used to "find" (or select) HTML elements based on their element name(tag name), id, class, attribute, and more.
+                            </li>
+                            <li>
+                                <strong>Element/Tag Name Selector</strong> – tag_name{} <br />
+                                <strong>Example : </strong> <pre>p{}
+a{}
+h1{}
+body{}
+</pre>
+                            </li>
+                            <li>
+                                <strong>ID Selector</strong> - #id{}<br />
+                                <strong>Example : </strong> <pre>#header{} 
+#top-bar{
+}</pre>
+                            </li>
+                            <li>
+                                <strong>Class Name Selector</strong> - .class_name {}<br />
+                                <strong>Example : </strong> <pre>.side-content{
+}
+.list{
+}</pre>
+                            </li>
+                            <li>
+                                <strong>Attribute Name Selector</strong> – [attribute_name]{}<br />
+                                <strong>Example : </strong> <pre>[required]{
+}</pre>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button href="#" type="button" class="btn btn-danger" data-dismiss="modal" data-target="#levels-of-css-modal" data-toggle="modal">Levels/Types of CSS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="levels-of-css-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Levels of CSS</h4>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li>
+                            <strong>Inline CSS - </strong> within the tags using style attribute. <br />
+                            <strong>Example : </strong> <pre>&lt;p style="color: red;">Red Colored Text&lt;/p>
+</pre>
+                        </li>
+                        <li>
+                            <strong>Internal CSS - </strong> within the document using style tag in head section or body section. <br />
+                            <strong>Example : </strong> <pre>&lt;style type="text/css">
+    p{color: red; }
+    .bordered { border : 1px solid black;}
+&lt;/style></pre>
+                        </li>
+                        <li>
+                            <strong>External CSS - </strong> in an External File. <br />
+                            <strong>Example : </strong> <pre>&lt;link href="PATH_TO_EXTERNAL_CSS_FILE.css" rel="stylesheet" /></pre>
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---------------------------->
+
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/libs/bootstrap3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/libs/cbm.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.main-topics-list .main-topic-btn').click(function (e) {
+                var subtopic = $($(this).data('target'));
+                $('.sub-topics').hide();
+                subtopic.slideDown();
+            });
+        });
+    </script>
+</body>
+</html>

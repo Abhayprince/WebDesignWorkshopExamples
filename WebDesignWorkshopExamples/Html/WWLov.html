@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List Of Values Example</title>
+
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            var finalOP = '';
+            var a = ['d','e','f','g'];
+            var b = ['h','i','j','k'];
+            var c = ['l','m','n','o'];
+            $("#cmp").change(function(e){
+                var data = $(this).val();
+                if(data=='A'){
+                    $(a).each(function(i,v){
+                        $('#pro').append('<option value='+v+'>'+v+'</option>');
+                    });
+                }
+            })
+        });
+    </script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container-fluid" style="background: #666; color: #fff; font-size:20px;">
+    <div class="container" style=" padding: 5px 0;">
+        <div class="col-sm-3">
+            <label class="pull-left">TEKATION</label>
+        </div>
+        <div class="col-sm-5">
+            <label class="text-center">
+                Workshop on
+                <big>Web Design & Development</big>
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label class="pull-right" style="font-size: 16px; margin-top: 5px">
+                <span style="margin-right: 15px;"><i class="glyphicon glyphicon-phone"></i> 0120 2406024 </span>
+                <span><i class="glyphicon glyphicon-globe"></i> www.tekation.com</span>
+            </label>
+        </div>
+    </div>
+</div>
+<br /><br />
+<div class="container">
+    <div class="col-sm-7">
+        <select name="company" id="cmp" <!--onchange="dropDownChange(this)"-->>
+        <option name="a" value="B">B</option>
+        <option name="b" value="A">A</option>
+        <option name="c" value="C">C</option>
+        </select>
+        <select name="process" id="pro">
+        </select>
+    </div>
+    <div class="col-sm-5">
+            <pre contenteditable="true">
+ $(function(){
+            var finalOP = '';
+            var a = ['d','e','f','g'];
+            var b = ['h','i','j','k'];
+            var c = ['l','m','n','o'];
+            $("#cmp").change(function(e){
+                var data = $(this).val();
+               // alert(data);
+                if(data=='A'){
+                    $(a).each(function(i,v){
+                        //alert(v);
+                       $('#pro').append('<option value='+v+'>'+v+'</option>');
+                    });
+                }
+            })
+        });
+</pre>
+    </div>
+</div>
+</body>
+</html>

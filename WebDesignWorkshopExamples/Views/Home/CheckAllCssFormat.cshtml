@@ -1,0 +1,278 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Check All CSS Format</title>
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        #chk-all-lbl
+        {
+            font-size: 18px; 
+            font-family: verdana;
+            cursor: pointer;
+        }
+        #chk-list
+        {
+            font-size: 16px; 
+            font-family: verdana; 
+            color: #245f2f;
+        }
+        #chk-list li
+        {
+            
+        }
+        #chk-list li label
+        {
+            font-weight: normal;
+            display: block;
+            padding: 5px;
+            border-bottom: 1px solid #d4d4d4;
+            cursor: pointer;
+        }
+        #chk-list li label:hover
+        {
+            background: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+    <br /><br /><br />
+    <div class="container">
+        <div class="col-sm-offset-2 col-sm-8">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <select class="form-control" id="font-size">
+                        <option value="0">Select Font Size</option>
+                        <option value="1">1px</option>
+                        <option value="2">2px</option>
+                        <option value="3">3px</option>
+                        <option value="5">5px</option>
+                        <option value="10">10px</option>
+                        <option value="12">12px</option>
+                        <option value="13">13px</option>
+                        <option value="14">14px</option>
+                        <option value="15">15px</option>
+                        <option value="18">18px</option>
+                        <option value="20">20px</option>
+                        <option value="24">24px</option>
+                        <option value="28">28px</option>
+                        <option value="30">30px</option>
+                        <option value="35">35px</option>
+                        <option value="40">40px</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="font-family">
+                        <option value="0">Select Font Family</option>
+                        <option value="Verdana" style="font-family:Verdana;">Verdana</option>
+                        <option value="Arial" style="font-family:Arial;">Arial</option>
+                        <option value="'Trebuchet MS'" style="font-family:'Trebuchet MS';">Trebuchet MS</option>
+                        <option value="Calibri" style="font-family:Verdana;">Calibri</option>
+                        <option value="'Times new roman'" style="font-family:'Times new roman';">Times New Roman</option>
+                        <option value="Aharoni" style="font-family:Aharoni;">Aharoni</option>
+                        <option value="'Segoe ui'" style="font-family:'Segoe ui';">Segoe UI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="font-color">
+                        <option value="0">Select Color</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Lime">Lime</option>
+                        <option value="Magenta">Magenta</option>
+                        <option value="Maroon">Maroon</option>
+                        <option value="Aqua">Aqua</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Grey">Grey</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="line-height">
+                        <option value="0">Select Line Height</option>
+                        <option value="1">1px</option>
+                        <option value="2">2px</option>
+                        <option value="3">3px</option>
+                        <option value="4">4px</option>
+                        <option value="5">5px</option>
+                        <option value="6">6px</option>
+                        <option value="7">7px</option>
+                        <option value="8">8px</option>
+                        <option value="9">9px</option>
+                        <option value="10">10px</option>
+                        <option value="11">11px</option>
+                        <option value="12">12px</option>
+                        <option value="15">15px</option>
+                        <option value="20">20px</option>
+                        <option value="35">35px</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control">
+                        <input type="checkbox" id="bold-chk" /> Bold
+                    </label>
+                    <label class="form-control">
+                        <input type="checkbox" id="italic-chk" /> Italic
+                    </label>
+                    <label class="form-control">
+                        <input type="checkbox" id="underline-chk" /> Underline
+                    </label>
+                </div>
+
+            </div>
+            <div class="col-sm-8">
+                <p id="output" style="padding: 15px; border: 1px solid #d4d4d4;">
+                    We at tekation believe in "SPREADING THE KNOWLEDGE FOR FUTURE". We provide Industrial Training on Latest Technologies like Java, .Net, 
+                    Android, PHP and Web Design etc. We have a very different way of training, We belive in practical knowledge not in theoritical knowledge, 
+                    so we focus more on practicing rather than rattafication of long written theoritical knowledge. We at Tekation do not have teachers, we have 
+                    Industry Professionals as trainers.
+                    We provide Industrial Training on Latest Technologies like Java, .Net,
+                    Android, PHP and Web Design etc. We have a very different way of training, We belive in practical knowledge not in theoritical knowledge,
+                    so we focus more on practicing rather than rattafication of long written theoritical knowledge. We at Tekation do not have teachers, we have
+                    Industry Professionals as trainers.
+                </p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <hr />
+        <br />
+        <div class=" col-sm-offset-3 col-sm-6">
+            <label id="chk-all-lbl">
+                <input type="checkbox" id="chk-all" /> Select All
+            </label>
+            <ul type="none" id="chk-list">
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> Java
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> .Net
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> Web Design & Development
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> Android
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> C & C++
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> iOS
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> PHP
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" class="chk" /> Database
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+
+        <hr />
+    </div>
+    <br /><br />
+    <ul id="nav-btns" type="none">
+        <li>
+            <a href="/home/htmltags" class="btn btn-primary">HTML Tags</a>
+        </li>
+        <li>
+            <a href="/home/htmlform" class="btn btn-warning">HTML Form</a>
+        </li>
+        <li>
+            <a href="/home/AudioVideo" class="btn btn-success">Audio & Video</a>
+        </li>
+        <li>
+            <a href="/home/CssStyle" class="btn btn-info">CSS Style</a>
+        </li>
+        <li>
+            <a href="/home/JavaScript" class="btn btn-danger">JavaScript</a>
+        </li>
+        <li>
+            <a href="/home/checkallcssformat" class="btn btn-warning">CSS Formating and Check All Example</a>
+        </li>
+        <li>
+            <a href="/home/Alertify" class="btn btn-success">Custom Alerts</a>
+        </li>
+        <li>
+            <a href="/home/TraditionalWebsite" class="btn btn-default">Traditional Website</a>
+        </li>
+    </ul>
+    <style type="text/css">
+        #nav-btns {
+            list-style-type: none;
+        }
+
+            #nav-btns li {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+                #nav-btns li a {
+                    border-radius: 0;
+                }
+    </style>
+    <br /><br />
+    <script type="text/javascript">
+        $(function () {
+            $('#font-size').change(function (e) {
+                $('#output').css('font-size', $(this).val() + 'px');
+            });
+            $('#font-family').change(function (e) {
+                $('#output').css('font-family', $(this).val());
+            });
+            $('#font-color').change(function (e) {
+                $('#output').css('color', $(this).val());
+            });
+            $('#line-height').change(function (e) {
+                $('#output').css('line-height', $(this).val());
+            });
+            $('#bold-chk').change(function (e) {
+                $('#output').css('font-weight', $(this).prop('checked')?'bold':'normal');
+            })
+            $('#italic-chk').change(function (e) {
+                $('#output').css('font-style', $(this).prop('checked') ? 'italic' : '');
+            })
+            $('#underline-chk').change(function (e) {
+                $('#output').css('text-decoration', $(this).prop('checked') ? 'underline' : '');
+            })
+
+            $('#chk-all').change(function () {
+                $('.chk').prop('checked', $(this).prop('checked'));
+            });
+            $('.chk').change(function () {
+                $('#chk-all').prop('checked', !$('.chk:not(:checked)').length > 0);
+            });
+        });
+    </script>
+</body>
+</html>

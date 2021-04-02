@@ -1,0 +1,66 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CssAnimation</title>
+
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var div = $("div#animate-div");
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '3em'}, "slow");
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container-fluid" style="background: #666; color: #fff; font-size:20px;">
+    <div class="container" style=" padding: 5px 0;">
+        <div class="col-sm-3">
+            <label class="pull-left">TEKATION</label>
+        </div>
+        <div class="col-sm-5">
+            <label class="text-center">
+                Workshop on
+                <big>Web Design & Development</big>
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label class="pull-right" style="font-size: 16px; margin-top: 5px">
+                <span style="margin-right: 15px;"><i class="glyphicon glyphicon-phone"></i> 0120 2406024 </span>
+                <span><i class="glyphicon glyphicon-globe"></i> www.tekation.com</span>
+            </label>
+        </div>
+    </div>
+</div>
+<br /><br />
+<div class="container">
+    <div class="col-sm-7">
+        <button class="btn btn-warning"> Start Animation </button>
+        <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+     <div id="animate-div" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+    </div>
+    <div class="col-sm-5">
+            <pre contenteditable="true">
+ $(document).ready(function(){
+            $("button").click(function(){
+                var div = $("div#animate-div");
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '3em'}, "slow");
+            });
+        });
+</pre>
+    </div>
+</div>
+
+
+
+</body>
+</html>

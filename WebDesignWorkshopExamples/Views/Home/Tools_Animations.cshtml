@@ -1,0 +1,158 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tools Animations</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/libs/animate.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid" style="background: #666; color: #fff; font-size:20px;">
+        <div class="container" style=" padding: 5px 0;">
+            <div class="col-sm-3">
+                <label class="pull-left">TEKATION</label>
+            </div>
+            <div class="col-sm-5">
+                <label class="text-center">
+                    Workshop on
+                    <big>Web Design & Development</big>
+                </label>
+            </div>
+            <div class="col-sm-4">
+                <label class="pull-right" style="font-size: 16px; margin-top: 5px">
+                    <span style="margin-right: 15px;"><i class="glyphicon glyphicon-phone"></i> 0120 2406024 </span>
+                    <span><i class="glyphicon glyphicon-globe"></i> www.tekation.com</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <div class="container">
+        <div class="col-sm-6">
+            <h2>Simple Animate <button class="btn btn-success btn-xs" id="simple-btn">Start Animation</button></h2>
+            
+            <div id="animate-div-simple" style="background:#98bf21;height:100px;width:100px;position:absolute;">&nbsp;</div>
+            <br />
+        </div>
+        <div class="col-sm-6">
+            <pre contenteditable="true">
+$(document).ready(function () {
+    $("#simple-btn").click(function () {
+        $("div#animate-div-simple").animate({ left: '250px' });
+    });
+});
+</pre>
+            <br /><br />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <br />
+    <div class="clearfix"></div>
+    <hr />
+    <br />
+    <div class="container">
+        <div class="col-sm-6">
+            <h2>Multiple Animate <button class="btn btn-warning btn-xs" id="multi-anim-btn"> Start Animation </button></h2>
+            
+            <div id="animate-div-multiple" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+        </div>
+        <div class="col-sm-6">
+            <pre contenteditable="true">
+ $(document).ready(function(){
+            $("#multi-anim-btn").click(function(){
+                var div = $("div#animate-div-multiple");
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '3em'}, "slow");
+            });
+        });
+</pre>
+        </div>
+    </div><br />
+<div class="clearfix"></div>
+    <hr />
+    <br />
+    <div class="container">
+        <div class="col-sm-6">
+            <h2>Animate Opacity <button class="btn btn-success btn-xs" id="opacity-btn">Start Animation</button></h2>
+            <div id="animate-div-opacity" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+        </div>
+        <div class="col-sm-6">
+            <pre contenteditable="true">
+ $(document).ready(function(){
+            $("#opacity-btn").click(function(){
+                var div = $("div#animate-div-opacity");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+        });
+</pre>
+        </div>
+    </div>
+    <br />
+    <div class="clearfix"></div>
+    <hr />
+    <br />
+    <div class="container">
+        <div class="col-sm-6">
+            <h2>Animate Multiple Properties <button class="btn btn-success btn-xs" id="multi-prop-btn">Start Animation</button></h2>
+            
+            <div id="animate-div-multi-prop" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+        </div>
+        <div class="col-sm-6">
+            <pre contenteditable="true">
+ $(document).ready(function(){
+            $("#multi-prop-btn").click(function(){
+                $("div#animate-div-multi-prop").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+            });
+        });
+</pre>
+        </div>
+    </div>
+    <hr />
+    <br /><br />
+    <script src="~/libs/jquery-3.2.1.min.js"></script>
+    <script src="~/libs/bootstrap3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/js/ApEditRun.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#simple-btn").click(function () {
+                $("div#animate-div-simple").animate({ left: '250px' });
+            });
+            //////////////////////
+            $("#multi-anim-btn").click(function () {
+                var div = $("div#animate-div-multiple");
+                div.animate({ left: '100px' }, "slow");
+                div.animate({ fontSize: '3em' }, "slow");
+            });
+            /////////////////////////
+            $("#opacity-btn").click(function () {
+                var div = $("div#animate-div-opacity");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+            //////////////////////////////
+            $("#multi-prop-btn").click(function () {
+                $("div#animate-div-multi-prop").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+            });
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>jQuery UI Autocomplete</title>
+
+    <link rel="stylesheet" href="libmenu/css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script src="libmenu/js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        } );
+    </script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container-fluid" style="background: #666; color: #fff; font-size:20px;">
+    <div class="container" style=" padding: 5px 0;">
+        <div class="col-sm-3">
+            <label class="pull-left">TEKATION</label>
+        </div>
+        <div class="col-sm-5">
+            <label class="text-center">
+                Workshop on
+                <big>Web Design & Development</big>
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label class="pull-right" style="font-size: 16px; margin-top: 5px">
+                <span style="margin-right: 15px;"><i class="glyphicon glyphicon-phone"></i> 0120 2406024 </span>
+                <span><i class="glyphicon glyphicon-globe"></i> www.tekation.com</span>
+            </label>
+        </div>
+    </div>
+</div>
+<br /><br />
+<div class="container">
+    <div class="col-sm-7">
+        <div class="ui-widget">
+            <label for="tags">Tags: </label>
+            <input id="tags">
+        </div>
+
+    </div>
+    <div class="col-sm-5">
+            <pre contenteditable="true">
+   $( function() {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        } );
+</pre>
+    </div>
+</div>
+</body>
+</html>

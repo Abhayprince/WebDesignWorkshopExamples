@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CssAnimation</title>
+
+    <script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="libmenu/css/jquery-ui.css">
+    <script type="text/javascript" src="libmenu/js/jquery-ui.js"></script>
+    <script>
+        $(function(){
+
+            $( "#parent" ).sortable({
+                stop: function( event, ui ) {
+                    $('#op').empty();
+                    $('#parent div').each(function(i,v){
+                        $("#op").append('<li>'+$(v).text()+'</li>');
+                    })
+
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid" style="background: #666; color: #fff; font-size:20px;">
+    <div class="container" style=" padding: 5px 0;">
+        <div class="col-sm-3">
+            <label class="pull-left">TEKATION</label>
+        </div>
+        <div class="col-sm-5">
+            <label class="text-center">
+                Workshop on
+                <big>Web Design & Development</big>
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label class="pull-right" style="font-size: 16px; margin-top: 5px">
+                <span style="margin-right: 15px;"><i class="glyphicon glyphicon-phone"></i> 0120 2406024 </span>
+                <span><i class="glyphicon glyphicon-globe"></i> www.tekation.com</span>
+            </label>
+        </div>
+    </div>
+</div>
+<br /><br />
+<div class="container">
+    <div class="col-sm-7">
+        <div id="parent" style="background-color: white;width: 50%;font-size: 18px;text-align: center">
+            <div style="background-color: orange;">Java</div>
+            <div style="background-color: red">.Net</div>
+            <div style="background-color: #ffff00">Web Design</div>
+            <div style="background-color: green">Marketing</div>
+            <div style="background-color: greenyellow">Android</div>
+        </div>
+        <ol id="op">
+
+        </ol>
+    </div>
+    <div class="col-sm-5">
+            <pre contenteditable="true">
+  $(function(){
+
+            $( "#parent" ).sortable({
+                stop: function( event, ui ) {
+                    $('#op').empty();
+                    $('#parent div').each(function(i,v){
+                        $("#op").append('<li>'+$(v).text()+'</li>');
+                    })
+
+                }
+            });
+        });
+</pre>
+    </div>
+</div>
+</body>
+</html>

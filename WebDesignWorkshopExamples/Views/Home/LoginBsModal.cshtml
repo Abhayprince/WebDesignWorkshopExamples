@@ -1,0 +1,219 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Bs Modal</title>
+    <link href="~/libs/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .login-register-box input {
+            border-radius: 0;
+        }
+        .other-login-options-ul li a {
+            margin-bottom: 6px;
+            width: 195px;
+                font-family: trebuchet ms;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 12px;
+        }
+        #login-btn
+        {
+            margin-bottom: 5px;
+        }
+        .input-group-addon
+        {
+            border-radius: 0;
+        }
+        .open-login-btn
+        {
+            font-family: Verdana;
+    font-size: 18px;
+    border: 2px solid #8c8989;
+    padding: 6px 30px;
+    transition: all ease .4s;
+    color: #2a78b1;
+        }
+        .open-login-btn:hover
+        {
+            background: #8c8989;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+    <link href="~/libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <br />
+        <div class="col-sm-offset-4 col-sm-4">
+            <a role="button" class="open-login-btn" data-toggle="modal" data-target="#login-modal">Login</a>
+        </div>
+    </div>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="bsmodalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header-success">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="bsmodalLabel">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="login-modal-body-container">
+                        <div class="row">
+                            <div class="login-register-box">
+                                <div class="col-sm-6">
+                                    <div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-fw fa-envelope"></span>
+                                                </span>
+                                                <input class="form-control" data-val="true" data-val-required="Please enter Email-ID or Mobile number" id="UserName" name="UserName" placeholder="Email-ID/Mobile Number" type="text" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <span class="fa fa-lock fa-fw"></span>
+                                                </span>
+                                                <input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="Password" type="password" value="">
+                                                <span id="show-pwd-btn" style="cursor: pointer;" class="input-group-addon" title="Show Password">
+                                                    <span class="fa fa-eye"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <input type="submit" class="btn btn-block btn-success" id="login-btn" value="Login">
+                                        <div class="clearfix"></div>
+                                        <a role="button" data-target="#forgot-password-modal" data-toggle="modal" class="pull-left btn btn-xs btn-warning">Forgot password?</a>
+                                        <a href="#" class="pull-right btn btn-xs btn-warning">New user? Register now</a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group" style="border-left: 1px solid #e2e2e2;">
+                                        <ul class="other-login-options-ul" type="none">
+                                            <li>
+                                                <a role="button" class="btn btn-primary" id="continue-with-facebook" title="Login with Facebook">
+                                                    <i class="fa fa-facebook fa-fw"></i>
+                                                    Continue with Facebook
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a role="button" class="btn btn-danger" id=" continue-with-google" title="Login with Google">
+                                                    <i class="fa fa-google-plus fa-fw"></i>
+                                                    Continue with Google
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a role="button" class="btn btn-info" id=" continue-with-twitter" title="Login with Twitter">
+                                                    <i class="fa fa-twitter fa-fw"></i>
+                                                    Continue with Twitter
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a role="button" class="btn btn-primary" id=" continue-with-linkedin" title="Login with Linkedin">
+                                                    <i class="fa fa-linkedin fa-fw"></i>
+                                                    Continue with Linkedin
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <br>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/libs/jquery-3.2.1.min.js"></script>
+    <script src="/libs/bootstrap3.3.7/js/bootstrap.min.js"></script>
+    <script src="/libs/cbm.js"></script>
+    <script src="/js/ApEditRun.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).on('click', '#show-pwd-btn', function (e) {
+                var btn = $(this);
+                var icon = $('.fa', btn);
+                icon.hasClass('fa-eye') ? (btn.attr('title', 'Hide Password'), icon.removeClass('fa-eye').addClass('fa-eye-slash'), $('#Password').attr('type', 'text')) :
+                (btn.attr('title', 'Show Password'), icon.removeClass('fa-eye-slash').addClass('fa-eye'), $('#Password').attr('type', 'password'));
+            });
+        });
+    </script>
+</body>
+</html>
+
+<div class="container">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-info">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Collapsible Group Item #3
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Collapsible Group Item #4
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 4 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
